@@ -1,0 +1,34 @@
+﻿VS Code: Cmd to add Excel Interop...
+         > dotnet add .\SPOCK.UI\ package Microsoft.Office.Interop.Excel
+         
+Functionality Enhancements
+--------------------------
+
+- Main form sections
+  1. Queue section - Remove queues that do not run thru Control Room
+  2. Current Errors section - How to EXCLUDE remediated process schedules. Do not show those that were taken care of
+  3. Current Errors section - Can SQL be modified to remove obvious/known issues that no one cares about?
+
+- Reporting
+  - View process timing runtime by stage name
+    1. select process -> build list of stage names
+    2. select stage name
+    3. Run
+  - View process runtimes by: hour, day or month
+  - View process change history / new releases by environment
+  - Below matrix view (DataGridView right-click on cell/column with dropdown menu for below)
+    1. By Resource (VDI)
+        - View bots used
+        - View processes used
+    2. By Process
+        - View bots used
+        - View resources used
+    3. By Bot
+        - View processes used
+        - View resources used
+    4. By Date range
+        - View processes run on that date
+        - View resources used on that date
+        - View bots used on that date
+
+Reporting - https://www.microsoft.com/en-us/download/details.aspx?id=55252
