@@ -63,28 +63,20 @@ namespace SPOCK
 
         internal static string LOCAL_TIME_ZONE = "Eastern Standard Time";
 
-        // Note these are PROD database references
-        internal static string DB_REPORT_USER = "User ID=Report_User;Password=Syracuse123!";
-        internal static string DB_DATABASE_USER = "User ID=SQLAdmin17;Password=RPAusers2017";
-
-        internal static DAL.SQLConnector DB_CONN_RPT_USER =
-            new DAL.SQLConnector(string.Format(Config.RPA_RPT, DB_REPORT_USER));
-        internal static DAL.SQLConnector DB_CONN_BP_PROD_USER =
-            new DAL.SQLConnector(string.Format(Config.DSN_BP_PROD, DB_DATABASE_USER));
-        internal static DAL.SQLConnector DB_CONN_BP_STAGE_USER =
-            new DAL.SQLConnector(string.Format(Config.DSN_BP_STAGE, DB_DATABASE_USER));
-        internal static DAL.SQLConnector DB_CONN_BP_TEST_USER =
-            new DAL.SQLConnector(string.Format(Config.DSN_BP_TEST, DB_DATABASE_USER));
+        internal static DAL.SQLConnector DB_CONN_RPT_USER = new DAL.SQLConnector(Config.RPA_RPT);
+        internal static DAL.SQLConnector DB_CONN_BP_PROD_USER = new DAL.SQLConnector(Config.DSN_BP_PROD);
+        internal static DAL.SQLConnector DB_CONN_BP_STAGE_USER = new DAL.SQLConnector(Config.DSN_BP_STAGE);
+        internal static DAL.SQLConnector DB_CONN_BP_TEST_USER = new DAL.SQLConnector(Config.DSN_BP_TEST);
 
         internal static string CUSTOM_REPORTS_FOLDER_NAME = @"\CustomSQL";
         internal static string QUERY_PATH_LIST_QUEUE_NAMES = @"SQL\List_QueueNames.sql";
         internal static string QUERY_PATH_LIST_ENVIRONMENT_VARIABLES = @"SQL\List_EnvironmentVariables.sql";
         internal static string QUERY_PATH_LIST_PROCESS_NAMES = @"SQL\List_ProcessNames.sql";
+        internal static string QUERY_PATH_LIST_ERROR_TYPES = @"SQL\List_ErrorTypes.sql";
         internal static string QUERY_RPT_LAST_LOGGED_IN_BOTS = @"SQL\Rpt_Resource_Last_Logged_In.sql";
         internal static string QUERY_RPT_ENVIRONMENT_VARIABLES = @"SQL\Rpt_Environment_Variables.sql";
         internal static string QUERY_RPT_RECENT_RELEASES = @"SQL\Rpt_Recent_Releases.sql";
         internal static string QUERY_RPT_GENERATE_QUEUE_REPORT = @"SQL\Rpt_Generate_Queue_Reporting.sql";
-        internal static string QUERY_RPT_GENERATE_QUEUE_REPORT_PO_PARKING = @"SQL\Rpt_Generate_Queue_Reporting _POParking.sql";
         internal static string QUERY_RPT_PROCESS_RUN_OVERVIEW = @"SQL\Rpt_Process_Run_Overview.sql";
         internal static string QUERY_RPT_QUEUE_DAILY_VOLUMES = @"SQL\Rpt_Queue_Daily_Volumes.sql";
         internal static string QUERY_RPT_RECENT_PROCESS_RUN_OVERVIEW = @"SQL\Rpt_Recent_Process_Run_Overview.sql";

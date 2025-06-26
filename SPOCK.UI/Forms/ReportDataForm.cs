@@ -13,8 +13,6 @@ namespace SPOCK
         private BackgroundWorker _reportWorker = new BackgroundWorker();
         private ExcelService _excelSvc = new ExcelService();
         private DataService _dataSvc = new DataService();
-
-        ////private string _queryFilepath = string.Empty;
         private string _querySqlText = string.Empty;
         private string _selectedListOptionText = string.Empty;
 
@@ -236,11 +234,6 @@ namespace SPOCK
 
             if (_comboSearchList.SelectedItem != null)
                 _selectedListOptionText = _comboSearchList.SelectedItem.ToString();
-
-            // Exception: If "Queue Reporting" and PO Parking then address reporting differences with special query
-            if (this.Text.ToUpper().Contains("QUEUE REPORT") &&
-                   _comboSearchList.SelectedItem.ToString().ToUpper() == Constants.RPT_MENU_ITEM_PO_PARKING)
-                _querySqlText = File.ReadAllText(Constants.QUERY_RPT_GENERATE_QUEUE_REPORT_PO_PARKING);
 
             if (!_datetimeFrom.Enabled)
                 LoadReportData();

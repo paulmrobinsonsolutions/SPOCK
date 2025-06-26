@@ -38,27 +38,7 @@ namespace SPOCK
         {
             get { return GetConfigValue("EmailAlertSubject"); }
         }
-
-        public static string QUERY_LIST_PROCESS_NAMES
-        {
-            get { return GetConfigValue("Query_ListProcessNames"); }
-        }
-
-        public static string QUERY_LIST_ERROR_TYPES
-        {
-            get { return GetConfigValue("Query_ListErrorTypes"); }
-        }
         
-        public static string MAPIEX_LOG_TEST
-        {
-            get { return GetConfigValue("MAPIEx_Log_Test"); }
-        }
-
-        public static string MAPIEX_LOG_PROD
-        {
-            get { return GetConfigValue("MAPIEx_Log_Prod"); }
-        }
-
         public static string PROCESS_ERROR_THRESHOLD_PERCENTAGE
         {
             get { return GetConfigValue("Process_Error_Threshold_Percentage"); }
